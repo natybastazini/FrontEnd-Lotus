@@ -44,37 +44,37 @@ export default function Home() {
         <nav className="flex flex-col gap-10 grow">
           <button className="flex flex-row items-center p-2 gap-2 hover:bg-pink-degrade-1 rounded-xl hover:text-white">
             <Image src={LogoHome} alt="home" className="size-8" ></Image>
-            <h1 className="font-Inter font-normal text-gray-2 text-lg">
+            <h1 className="font-Inter font-normal text-gray-3 text-lg">
               Home
             </h1>
           </button>
           <button className="flex flex-row items-center p-2 gap-2 hover:bg-pink-degrade-1 rounded-xl">
             <Image src={LogoMonitoramento} alt="monitoramento" className="size-8" ></Image>
-            <h1 className="font-Inter font-normal text-gray-2 text-lg">
+            <h1 className="font-Inter font-normal text-gray-3 text-lg">
               Monitoramento
             </h1>
           </button>
           <button className="flex flex-row items-center p-2 gap-2 hover:bg-pink-degrade-1 rounded-xl">
             <Image src={LogoConteudo} alt="conteudo" className="size-8" ></Image>
-            <h1 className="font-Inter font-normal text-gray-2 text-lg">
+            <h1 className="font-Inter font-normal text-gray-3 text-lg">
               Conteúdo
             </h1>
           </button>
           <button className="flex flex-row items-center p-2 gap-2 hover:bg-pink-degrade-1 rounded-xl">
             <Image src={LogoChat} alt="chat" className="size-8" ></Image>
-            <h1 className="font-Inter font-normal text-gray-2 text-lg">
+            <h1 className="font-Inter font-normal text-gray-3 text-lg">
               Chat
             </h1>
           </button>
           <button className="flex flex-row items-center p-2 gap-2 hover:bg-pink-degrade-1 rounded-xl">
             <Image src={LogoGaleria} alt="galeria" className="size-8" ></Image>
-            <h1 className="font-Inter font-normal text-gray-2 text-lg">
+            <h1 className="font-Inter font-normal text-gray-3 text-lg">
               Galeria
             </h1>
           </button>
           <button className="flex flex-row items-center p-2 gap-2 hover:bg-pink-degrade-1 rounded-xl">
             <Image src={LogoPerfil} alt="perfil" className="size-8" ></Image>
-            <h1 className="font-Inter font-normal text-gray-2 text-lg">
+            <h1 className="font-Inter font-normal text-gray-3 text-lg">
               Perfil
             </h1>
           </button>
@@ -82,7 +82,7 @@ export default function Home() {
         {/* botão sair */}
         <button className="flex flex-row gap-2 items-center">
           <Image src={LogoLogout} alt="logout" className="size-8"></Image>
-          <p className="font-Inter font-normal text-gray-2 text-lg">
+          <p className="font-Inter font-normal text-gray-3 text-lg">
             Log out
           </p>
         </button>
@@ -98,10 +98,10 @@ export default function Home() {
           </div>
           {/* título */}
           <div className="flex flex-col h-[10%] items-center justify-center gap-2">
-            <h1 className="font-ABeeZee font-light text-gray-2 text-5xl">
+            <h1 className="font-ABeeZee font-light text-gray-3 text-5xl">
               Conteúdos
             </h1>
-            <div className="bg-gray-200 w-[70%] h-2 rounded-full"></div>
+            <div className="bg-gray-2 w-[70%] h-2 rounded-full"></div>
           </div>
           {/* cards */}
           <div className="h-[60%] flex flex-col justify-between gap-4 px-10">
@@ -129,7 +129,7 @@ export default function Home() {
                     </div>
                   </div>
                   {/* título do card */}
-                  <p className="font-Inter font-medium text-xl text-gray-2 p-4">
+                  <p className="font-Inter font-medium text-xl text-gray-3 p-4">
                     Desvendando a Amamentação
                   </p>
                 </div>
@@ -142,7 +142,7 @@ export default function Home() {
                     </div>
                   </div>
                   {/* título do card */}
-                  <p className="font-Inter font-medium text-xl text-gray-2 p-4">
+                  <p className="font-Inter font-medium text-xl text-gray-3 p-4">
                     Desvendando a Amamentação
                   </p>
                 </div>
@@ -172,7 +172,7 @@ export default function Home() {
                     </div>
                   </div>
                   {/* título do card */}
-                  <p className="font-Inter font-medium text-xl text-gray-2 p-4">
+                  <p className="font-Inter font-medium text-xl text-gray-3 p-4">
                     Desvendando a Amamentação
                   </p>
                 </div>
@@ -183,7 +183,7 @@ export default function Home() {
                     </div>
                   </div>
                   {/* título do card */}
-                  <p className="font-Inter font-medium text-xl text-gray-2 p-4">
+                  <p className="font-Inter font-medium text-xl text-gray-3 p-4">
                     Desvendando a Amamentação
                   </p>
                 </div>
