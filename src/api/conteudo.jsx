@@ -34,7 +34,7 @@ const criarCard = (conteudo) => {
     return card
 }
 
-const gerarCard = document.getElementById('todosCards')
-const card = criarCard(conteudo)
-gerarCard.appendChild(card)
+// const gerarCard = document.getElementById('todosCards')
+// const card = criarCard(conteudo)
+// gerarCard.appendChild(card)
 
