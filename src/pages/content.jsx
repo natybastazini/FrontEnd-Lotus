@@ -28,7 +28,7 @@ export default function Home() {
         </div>
         {/* navegação */}
         <nav className="flex flex-col gap-10 grow">
-          <button className="flex flex-row items-center p-2 gap-2 hover:bg-pink-degrade-1 rounded-xl hover:text-white">
+          <button className="flex flex-row items-center p-2 gap-2 hover:bg-pink-degrade-1 rounded-xl ">
             <Image src={LogoHome} alt="home" className="size-8" ></Image>
             <h1 className="font-Inter font-normal text-gray-3 text-lg">
               Home
@@ -87,7 +87,6 @@ export default function Home() {
             <h1 className="font-ABeeZee font-light text-gray-3 text-5xl">
               Conteúdos
             </h1>
-            <div className="bg-gray-4 w-[70%] h-2 rounded-full"></div>
             <div className="bg-gray-2 w-[70%] h-2 rounded-full"></div>
           </div>
           {/* cards */}
@@ -135,49 +134,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {/* 2ª fileira de cards */}
-            <div className="flex flex-col gap-2">
-              {/* cabeçalho */}
-              <div className="flex flex-row w-full h-20 items-center justify-between">
-                {/* subtítulo */}
-                <h1 className="font-ABeeZee font-medium text-3xl text-gray-3 ">
-                  Amamentação
-                </h1>
-                <button>
-                  <div className="flex flex-row items-center gap-2">
-                    <Image src={LogoVerMais} alt="ver-mais" className="size-4"></Image>
-                    <a className="font-Inter font-light text-base text-gray-3">Ver mais</a>
-                  </div>
-                </button>
-              </div>
-              {/* card */}
-              <div className="flex flex-row gap-8">
-                <div className="h-72 w-[500px] bg-white rounded-2xl shadow-lg aspect-video">
-                  <div className="h-[80%] rounded-2xl bg-pink-300">
-                    <div className="h-full w-full">
-                      <Image></Image>
-                    </div>
-                  </div>
-                  {/* título do card */}
-                  <p className="font-Inter font-medium text-xl text-gray-3 p-4">
-                    Desvendando a Amamentação
-                  </p>
-                </div>
-                <div className="h-72 w-[500px] bg-white rounded-2xl shadow-lg aspect-video">
-                  <div className="h-[80%] rounded-2xl bg-pink-300">
-                    <div className="h-full w-full">
-                      <Image></Image>
-                    </div>
-                  </div>
-                  {/* título do card */}
-                  <p className="font-Inter font-medium text-xl text-gray-3 p-4">
-                    Desvendando a Amamentação
-                  </p>
-                </div>
-                
-              </div>
-            </div>
-
           </div>
         </div>
       </main>

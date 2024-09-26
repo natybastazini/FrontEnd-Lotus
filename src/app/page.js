@@ -1,10 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-// API
-// import { useEffect, useState } from "react";
-import { getContentAll } from "@/api/conteudo";
-
 import Logo from "../../public/icons/utilities/lotus-icon.svg"
 import LogoVerMais from "../../public/icons/utilities/add-circle.svg"
 import LogoLogout from "../../public/icons/nav/logout.svg"
@@ -16,8 +12,20 @@ import LogoConteudo from "../../public/icons/nav/conteudos.svg"
 import LogoChat from "../../public/icons/nav/chat.svg"
 import LogoGaleria from "../../public/icons/nav/galeria.svg"
 import LogoPerfil from "../../public/icons/nav/profile.svg"
+import Card from "@/components/Card";
 
-export default function Home() {
+export default async function Home() {
+
+    async function getContentAll() {
+
+        const url = `http://localhost:8080/v1/Lotus/conteudo/gestante` 
+        const response = await fetch(url)
+        const data = await response.json()
+        return data.conteudosDados
+
+    }
+
+    const conteudo = await getContentAll()
 
   return (
     <div className="flex h-screen">
@@ -31,7 +39,7 @@ export default function Home() {
         </div>
         {/* navegação */}
         <nav className="flex flex-col gap-10 grow">
-          <button className="flex flex-row items-center p-2 gap-2 hover:bg-pink-degrade-1 rounded-xl hover:text-white">
+          <button className="flex flex-row items-center p-2 gap-2 hover:bg-pink-degrade-1 rounded-xl ">
             <Image src={LogoHome} alt="home" className="size-8" ></Image>
             <h1 className="font-Inter font-normal text-gray-3 text-lg">
               Home
@@ -93,9 +101,9 @@ export default function Home() {
             <div className="bg-gray-2 w-[70%] h-2 rounded-full"></div>
           </div>
           {/* cards */}
-          <div className="h-[60%] flex flex-col justify-between gap-4 px-10" id="todosCards">
+          <div className="h-[60%] flex flex-col justify-between gap-4 px-10">
             {/* 1ª fileira de cards */}
-            <section className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2">
               {/* cabeçalho */}
               <div className="flex flex-row w-full h-20 items-center justify-between">
                 {/* subtítulo */}
@@ -112,7 +120,11 @@ export default function Home() {
               {/* card */}
               <div className="flex flex-row gap-8">
 
-                {/* <div className="h-64 w-[400px] bg-white rounded-2xl shadow-lg aspect-video">
+                {conteudo.map((item)=>{
+                    return <Card imagem={item.foto_capa} titulo={item.titulo_conteudo} key={item.id_conteudos} />
+                })}
+
+                {/* <div className="h-72 w-[500px] bg-white rounded-2xl shadow-lg aspect-video">
                   <div className="h-[80%] rounded-2xl bg-pink-300 ">
                     <div className="h-full w-full">
                       <Image></Image>          
@@ -123,8 +135,10 @@ export default function Home() {
                     Desvendando a Amamentação
                   </p>
                 </div> */}
+                
+                
               </div>
-            </section>
+            </div>
           </div>
         </div>
       </main>
