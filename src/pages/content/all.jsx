@@ -15,7 +15,6 @@ import LogoPerfil from "../../public/icons/nav/profile.svg"
 
 export default function Home() {
 
-
   return (
     <div className="flex h-screen">
       <header className="flex flex-col w-[20%] py-10 px-10">
@@ -81,13 +80,6 @@ export default function Home() {
             <div className="bg-pink-degrade-2 w-2/3 h-28 flex justify-end rounded-b-full">
               <div className="bg-pink-degrade-1 w-1/2 h-28 rounded-bl-full"></div> 
             </div> 
-          </div>
-          {/* título */}
-          <div className="flex flex-col h-[10%] items-center justify-center gap-2">
-            <h1 className="font-ABeeZee font-light text-gray-2 text-5xl">
-              Conteúdos
-            </h1>
-            <div className="bg-gray-4 w-[70%] h-2 rounded-full"></div>
           </div>
           {/* cards */}
           <div className="h-[60%] flex flex-col justify-between gap-4 px-10">

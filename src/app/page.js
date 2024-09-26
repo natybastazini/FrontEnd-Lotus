@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
+// API
+// import { useEffect, useState } from "react";
+import { getContentAll } from "@/api/conteudo";
+
 import Logo from "../../public/icons/utilities/lotus-icon.svg"
 import LogoVerMais from "../../public/icons/utilities/add-circle.svg"
 import LogoLogout from "../../public/icons/nav/logout.svg"
@@ -14,21 +18,6 @@ import LogoGaleria from "../../public/icons/nav/galeria.svg"
 import LogoPerfil from "../../public/icons/nav/profile.svg"
 
 export default function Home() {
-
-  // const [cardsData, setCardsData] = useState([]);
-
-  // useEffect(() => {
-  //   const fetchCardsData = async () => {
-  //     try {
-  //       const response = await axios.get("URL_DA_SUA_API");
-  //       setCardsData(response.data); // Assumindo que os dados estão no formato correto
-  //     } catch (error) {
-  //       console.error("Erro ao buscar os dados:", error);
-  //     }
-  //   };
-
-  //   fetchCardsData();
-  // }, []) ;
 
   return (
     <div className="flex h-screen">
@@ -104,9 +93,9 @@ export default function Home() {
             <div className="bg-gray-2 w-[70%] h-2 rounded-full"></div>
           </div>
           {/* cards */}
-          <div className="h-[60%] flex flex-col justify-between gap-4 px-10">
+          <div className="h-[60%] flex flex-col justify-between gap-4 px-10" id="todosCards">
             {/* 1ª fileira de cards */}
-            <div className="flex flex-col gap-2">
+            <section className="flex flex-col gap-2">
               {/* cabeçalho */}
               <div className="flex flex-row w-full h-20 items-center justify-between">
                 {/* subtítulo */}
@@ -122,75 +111,20 @@ export default function Home() {
               </div>
               {/* card */}
               <div className="flex flex-row gap-8">
-                <div className="h-72 w-[500px] bg-white rounded-2xl shadow-lg aspect-video">
+
+                {/* <div className="h-64 w-[400px] bg-white rounded-2xl shadow-lg aspect-video">
                   <div className="h-[80%] rounded-2xl bg-pink-300 ">
                     <div className="h-full w-full">
                       <Image></Image>          
                     </div>
-                  </div>
+                  </div> */}
                   {/* título do card */}
-                  <p className="font-Inter font-medium text-xl text-gray-3 p-4">
+                  {/* <p className="font-Inter font-medium text-xl text-gray-3 p-4">
                     Desvendando a Amamentação
                   </p>
-                </div>
-                
-                {/* card */}
-                <div className="h-72 w-[500px] bg-white rounded-2xl shadow-lg aspect-video">
-                  <div className="h-[80%] rounded-2xl bg-pink-300">
-                    <div className="h-full w-full">
-                      <Image></Image>
-                    </div>
-                  </div>
-                  {/* título do card */}
-                  <p className="font-Inter font-medium text-xl text-gray-3 p-4">
-                    Desvendando a Amamentação
-                  </p>
-                </div>
+                </div> */}
               </div>
-            </div>
-            {/* 2ª fileira de cards */}
-            <div className="flex flex-col gap-2">
-              {/* cabeçalho */}
-              <div className="flex flex-row w-full h-20 items-center justify-between">
-                {/* subtítulo */}
-                <h1 className="font-ABeeZee font-medium text-3xl text-gray-3 ">
-                  Amamentação
-                </h1>
-                <button>
-                  <div className="flex flex-row items-center gap-2">
-                    <Image src={LogoVerMais} alt="ver-mais" className="size-4"></Image>
-                    <a className="font-Inter font-light text-base text-gray-3">Ver mais</a>
-                  </div>
-                </button>
-              </div>
-              {/* card */}
-              <div className="flex flex-row gap-8">
-                <div className="h-72 w-[500px] bg-white rounded-2xl shadow-lg aspect-video">
-                  <div className="h-[80%] rounded-2xl bg-pink-300">
-                    <div className="h-full w-full">
-                      <Image></Image>
-                    </div>
-                  </div>
-                  {/* título do card */}
-                  <p className="font-Inter font-medium text-xl text-gray-3 p-4">
-                    Desvendando a Amamentação
-                  </p>
-                </div>
-                <div className="h-72 w-[500px] bg-white rounded-2xl shadow-lg aspect-video">
-                  <div className="h-[80%] rounded-2xl bg-pink-300">
-                    <div className="h-full w-full">
-                      <Image></Image>
-                    </div>
-                  </div>
-                  {/* título do card */}
-                  <p className="font-Inter font-medium text-xl text-gray-3 p-4">
-                    Desvendando a Amamentação
-                  </p>
-                </div>
-                
-              </div>
-            </div>
-
+            </section>
           </div>
         </div>
       </main>
