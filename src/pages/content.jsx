@@ -12,9 +12,20 @@ import LogoConteudo from "../../public/icons/nav/conteudos.svg"
 import LogoChat from "../../public/icons/nav/chat.svg"
 import LogoGaleria from "../../public/icons/nav/galeria.svg"
 import LogoPerfil from "../../public/icons/nav/profile.svg"
+import Card from "@/components/Card";
 
-export default function Home() {
+export default async function Home() {
 
+    async function getContentAll() {
+
+        const url = `http://localhost:8080/v1/Lotus/conteudo/gestante` 
+        const response = await fetch(url)
+        const data = await response.json()
+        return data.conteudosDados
+
+    }
+
+    const conteudo = await getContentAll()
 
   return (
     <div className="flex h-screen">
@@ -108,30 +119,24 @@ export default function Home() {
               </div>
               {/* card */}
               <div className="flex flex-row gap-8">
-                <div className="h-72 w-[500px] bg-white rounded-2xl shadow-lg aspect-video">
+
+                {conteudo.map((item)=>{
+                    return <Card imagem={item.foto_capa} titulo={item.titulo_conteudo} key={item.id_conteudos} />
+                })}
+
+                {/* <div className="h-72 w-[500px] bg-white rounded-2xl shadow-lg aspect-video">
                   <div className="h-[80%] rounded-2xl bg-pink-300 ">
                     <div className="h-full w-full">
                       <Image></Image>          
                     </div>
-                  </div>
+                  </div> */}
                   {/* título do card */}
-                  <p className="font-Inter font-medium text-xl text-gray-3 p-4">
+                  {/* <p className="font-Inter font-medium text-xl text-gray-3 p-4">
                     Desvendando a Amamentação
                   </p>
-                </div>
+                </div> */}
                 
-                {/* card */}
-                <div className="h-72 w-[500px] bg-white rounded-2xl shadow-lg aspect-video">
-                  <div className="h-[80%] rounded-2xl bg-pink-300">
-                    <div className="h-full w-full">
-                      <Image></Image>
-                    </div>
-                  </div>
-                  {/* título do card */}
-                  <p className="font-Inter font-medium text-xl text-gray-3 p-4">
-                    Desvendando a Amamentação
-                  </p>
-                </div>
+                
               </div>
             </div>
           </div>
