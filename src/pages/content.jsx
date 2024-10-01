@@ -14,6 +14,8 @@ import LogoGaleria from "../../public/icons/nav/galeria.svg"
 import LogoPerfil from "../../public/icons/nav/profile.svg"
 import Card from "@/components/Card";
 
+// esse aqui
+
 export default async function Home() {
 
     async function getContentAll() {
